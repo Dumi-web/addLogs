@@ -1,3 +1,4 @@
+import java.util.function.BooleanSupplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,41 +27,47 @@ public class Pass {
             }
         }
         if (name.equals(password)) {
-            result += "Error: Password Should exist.\n";
+            result += "Try again: Password Should exist.\n";
             count--;
         }
         if (password.length() <= 8) {
-            result += "Error: Password Should be longer than 8 Characters.\n";
+            result += "Try again: Password Should be longer than 8 Characters.\n";
             count--;
         }
-         if (!hasNum) {
-            result += "Error: Password does not have a digit.\n";
+        if (!hasNum) {
+            result += "Try again: Password does not have a digit.\n";
             count--;
         }
-         if (!hasCap) {
-            result += "Error: Password does not have uppercase.\n";
+        if (!hasCap) {
+            result += "Try again: Password does not have uppercase.\n";
             count--;
         }
-         if (!hasLow) {
-            result += "Error: Password does not have lowercase.\n";
+        if (!hasLow) {
+            result += "Try again: Password does not have lowercase.\n";
             count--;
         }
         if (sMatcher.matches()) {
-            result += "Error: Password does not have special character.";
+            result += "Try again: Password does not have special character.";
             count--;
         }
         return result;
     }
-        public static boolean passwordIsOkay(){
-            if (count < 3) {
-                return false;
 
-            } else {
-                return true;
-            }
+    public static String passwordIsOkay() {
 
+        String output = "";
+
+        if(count < 3) {
+            output += "User password is not okay.";
         }
+
+        else{
+            output += "User password is okay.";
+        }
+        return output;
     }
+}
+
 
 
 

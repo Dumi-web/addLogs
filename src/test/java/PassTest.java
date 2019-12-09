@@ -6,7 +6,6 @@ class PassTest {
 
     @Test
     void passwordIsValid() {
-
         assertEquals("Error: Password Should exist.\n" +
                 "Error: Password Should be longer than 8 Characters.\n" +
                 "Error: Password does not have a digit.\n" +
@@ -22,6 +21,6 @@ class PassTest {
     }
     @Test
     void passwordIsOkay(){
-        assertTrue(Pass.passwordIsOkay());
+        assertEquals("User password is not okay",Pass.passwordIsOkay());
     }
 }
