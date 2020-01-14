@@ -1,0 +1,5 @@
+s[ERROR] 2020-01-14 15:18:21.567 [Test worker] PasswordOk - Try again: Password Should be longer than 8 Characters.
++Try again: Password does not have a digit.
+-Try again: Password does not have uppercase.
+5Try again: Password does not have special character.
+V[DEBUG] 2020-01-14 15:18:21.589 [Test worker] PasswordOk - User password is not okay.

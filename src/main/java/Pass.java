@@ -1,8 +1,11 @@
-import java.util.function.BooleanSupplier;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Pass {
+    private static final Logger logger = LogManager.getLogger(PasswordOk.class.getName());
     static int count = 6;
 
     public static String passwordIsValid(String password) {
@@ -43,13 +46,14 @@ public class Pass {
             count--;
         }
         if (!hasLow) {
-            result += "Try again: Password does not have lowercase.\n";
+            result +="Try again: Password does not have lowercase.\n";
             count--;
         }
         if (sMatcher.matches()) {
             result += "Try again: Password does not have special character.";
             count--;
         }
+        logger.error(result);
         return result;
     }
 
@@ -62,8 +66,9 @@ public class Pass {
         }
 
         else{
-            output += "User password is okay.";
+            output+= "User password is okay.";
         }
+        logger.debug(output);
         return output;
     }
 }

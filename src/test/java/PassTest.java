@@ -4,23 +4,32 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PassTest {
 
+
     @Test
     void passwordIsValid() {
-        assertEquals("Error: Password Should exist.\n" +
-                "Error: Password Should be longer than 8 Characters.\n" +
-                "Error: Password does not have a digit.\n" +
-                "Error: Password does not have uppercase.\n" +
-                "Error: Password does not have lowercase.\n" +
-                "Error: Password does not have special character.", Pass.passwordIsValid(""));
+        assertEquals("Try again: Password Should exist.\n" +
+                "Try again: Password Should be longer than 8 Characters.\n" +
+                "Try again: Password does not have a digit.\n" +
+                "Try again: Password does not have uppercase.\n" +
+                "Try again: Password does not have lowercase.\n" +
+                "Try again: Password does not have special character.", Pass.passwordIsValid(""));
 
-        assertEquals("Error: Password Should be longer than 8 Characters.\n", Pass.passwordIsValid("poPuw1!"));
-        assertEquals("Error: Password does not have a digit.\n", Pass.passwordIsValid("hPhjbjhjgv@"));
-        assertEquals("Error: Password does not have uppercase.\n", Pass.passwordIsValid("bgxdrytpo3@"));
-        assertEquals("Error: Password does not have lowercase.\n", Pass.passwordIsValid("HHHHOPTYP1@"));
-        assertEquals("Error: Password does not have special character.", Pass.passwordIsValid("hdhhjHuyi1"));
+        assertEquals("Try again: Password Should be longer than 8 Characters.\n", Pass.passwordIsValid("pA1!"));
+        assertEquals("Try again: Password does not have a digit.\n", Pass.passwordIsValid("hPhjbjhjgv@"));
+        assertEquals("Try again: Password does not have uppercase.\n", Pass.passwordIsValid("bgxdrytpo3@"));
+        assertEquals("Try again: Password does not have lowercase.\n", Pass.passwordIsValid("HHHHOPTYP1@"));
+        assertEquals("Try again: Password does not have special character.", Pass.passwordIsValid("hdhhjHuyi1"));
     }
-    @Test
+
+
+
+
+   @Test
     void passwordIsOkay(){
-        assertEquals("User password is not okay",Pass.passwordIsOkay());
+
+        Pass.passwordIsValid("p");
+        assertEquals("User password is okay.",Pass.passwordIsOkay());
+        assertEquals("User password is not okay.",Pass.passwordIsOkay());
+
     }
 }
