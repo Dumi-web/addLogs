@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PassTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-01-14T13:18:20" hostname="Area51s-MacBook-Pro.local" time="0.928">
+<testsuite name="PassTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-01-17T10:22:41" hostname="Area51s-MacBook-Pro.local" time="7.193">
   <properties/>
-  <testcase name="passwordIsOkay()" classname="PassTest" time="0.928">
+  <testcase name="passwordIsOkay()" classname="PassTest" time="7.193">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;User password is okay.&gt; but was: &lt;User password is not okay.&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;User password is okay.&gt; but was: &lt;User password is not okay.&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:184)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:179)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:508)
-	at PassTest.passwordIsOkay(PassTest.java:31)
+	at PassTest.passwordIsOkay(PassTest.java:27)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,11 +75,11 @@
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <system-out><![CDATA[[ERROR] 2020-01-14 15:18:21.567 [Test worker] PasswordOk - Try again: Password Should be longer than 8 Characters.
+  <system-out><![CDATA[[ERROR] 2020-01-17 12:22:48.566 [Test worker] PasswordOk - Try again: Password Should be longer than 8 Characters.
 Try again: Password does not have a digit.
 Try again: Password does not have uppercase.
 Try again: Password does not have special character.
-[DEBUG] 2020-01-14 15:18:21.589 [Test worker] PasswordOk - User password is not okay.
+[DEBUG] 2020-01-17 12:22:48.588 [Test worker] PasswordOk - User password is not okay.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

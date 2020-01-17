@@ -21,12 +21,8 @@ class PassTest {
         assertEquals("Try again: Password does not have special character.", Pass.passwordIsValid("hdhhjHuyi1"));
     }
 
-
-
-
-   @Test
+    @Test
     void passwordIsOkay(){
-
         Pass.passwordIsValid("p");
         assertEquals("User password is okay.",Pass.passwordIsOkay());
         assertEquals("User password is not okay.",Pass.passwordIsOkay());
